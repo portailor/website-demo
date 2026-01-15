@@ -1,0 +1,2591 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="기아자동차 설비관리 엔지니어 김민재 포트폴리오 - Siemens PLC, Yaskawa 로봇 전문가">
+    <meta name="keywords" content="설비관리, 엔지니어, 기아자동차, PLC, 로봇, 전기공학">
+    <title>Portfolio | 설비관리 엔지니어 김민재</title>
+<!-- SEO 최적화 -->
+<link rel="canonical" href="https://portailor.github.io/website-demo/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="설비관리 엔지니어 김민재">
+<meta property="og:description" content="기아자동차 설비관리부. Siemens PLC 전문.">
+<meta property="og:url" content="https://portailor.github.io/website-demo/">
+<meta property="og:image" content="https://portailor.github.io/website-demo/profile.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': {
+                            900: '#0a1628',
+                            800: '#0f2240',
+                            700: '#142d52',
+                            600: '#1a3a68',
+                            500: '#1e4d8c'
+                        },
+                        'accent': {
+                            gold: '#c9a962',
+                            silver: '#a8b5c4'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Noto Sans KR', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a1628;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e4d8c;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+
+        /* Gradient text animation */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a8b5c4 50%, #c9a962 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtle glow effect */
+        .glow-effect {
+            box-shadow: 0 0 40px rgba(30, 77, 140, 0.3);
+        }
+
+        /* Card hover animation */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Skill bar animation */
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Navigation active state */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #c9a962, #ffffff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* YouTube button glow */
+        .youtube-glow {
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+            }
+        }
+
+        /* Fade in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero background pattern */
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(30, 77, 140, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 60% 80%, rgba(30, 77, 140, 0.1) 0%, transparent 40%);
+        }
+
+        /* Timeline styles */
+        .timeline-line {
+            background: linear-gradient(180deg, #1e4d8c 0%, #c9a962 100%);
+        }
+
+        /* Email Modal */
+        .modal-overlay {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-content {
+            transform: scale(0.9) translateY(-20px);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .copy-button:hover {
+            background: #1a3a68;
+        }
+
+        .copy-success {
+            animation: fadeInOut 2s ease;
+        }
+
+        @keyframes fadeInOut {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+        }
+
+        /* Scroll Animations */
+        .scroll-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-fade-in.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-left.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Certification Cards */
+        .cert-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cert-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .cert-card-progress {
+            border-style: dashed;
+            opacity: 0.7;
+        }
+
+        .cert-card-progress:hover {
+            opacity: 1;
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #1a3a68;
+        }
+
+        /* Enhanced Timeline */
+        .timeline-gradient {
+            background: linear-gradient(180deg, #1e4d8c 0%, #c9a962 100%);
+            width: 3px;
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-width: 4px;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle button {
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle button.active {
+            color: #c9a962;
+            font-weight: 600;
+        }
+
+        /* Translation fade effect */
+        [data-lang] {
+            transition: opacity 0.3s ease;
+        }
+
+        .translating [data-lang] {
+            opacity: 0;
+        }
+
+        /* ========================================
+           PREMIUM INTERACTIVE FEATURES
+           ======================================== */
+
+        /* Floating Inquiry Button */
+        .floating-inquiry-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            background: linear-gradient(135deg, #c9a962 0%, #d4b76a 100%);
+            color: #0a1628;
+            padding: 16px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 8px 24px rgba(201, 169, 98, 0.4);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse-float 3s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        .floating-inquiry-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(201, 169, 98, 0.6);
+        }
+
+        .floating-inquiry-btn::before {
+            content: '💬';
+            font-size: 18px;
+        }
+
+        @keyframes pulse-float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                box-shadow: 0 8px 24px rgba(201, 169, 98, 0.4);
+            }
+
+            50% {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 32px rgba(201, 169, 98, 0.5);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-inquiry-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 18px;
+                font-size: 12px;
+            }
+        }
+
+        /* Enhanced Card Hover Effects */
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .card-hover::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, transparent, #c9a962, transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+        }
+
+        .card-hover:hover::before {
+            opacity: 1;
+        }
+
+               /* Link Click Ripple Effect */
+        a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.6) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease-out, height 0.6s ease-out;
+        }
+
+        a:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Cursor Trail */
+        .cursor-trail {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(201, 169, 98, 0.8), rgba(201, 169, 98, 0));
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Typing Cursor Effect */
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            background-color: #c9a962;
+            margin-left: 4px;
+            animation: blink-cursor 1s step-end infinite;
+        }
+
+        .typing-cursor.fade-out {
+            animation: fade-cursor-out 0.5s ease-out forwards;
+        }
+
+        @keyframes blink-cursor {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fade-cursor-out {
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Particle Canvas */
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Hero Parallax Container */
+        .parallax-hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Number Counting */
+        .counting-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Skill Bar Enhancement */
+        .skill-percentage {
+            position: absolute;
+            right: 0;
+            top: -24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #c9a962;
+        }
+
+        /* Footer Branding */
+        .portailor-branding {
+            font-size: 12px;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .portailor-branding:hover {
+            color: #c9a962;
+        }
+
+        /* Accessibility - Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .cursor-trail {
+                display: none;
+            }
+
+            .floating-inquiry-btn {
+                animation: none;
+            }
+        }
+
+        /* Mobile - Disable heavy effects */
+        @media (max-width: 768px) {
+            .cursor-trail {
+                display: none;
+            }
+
+            #particle-canvas {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-navy-900 text-white antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700/50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#hero" class="text-xl font-bold tracking-tight">
+                    <span class="text-white">PORTFOLIO</span>
+                    <span class="text-accent-gold">.</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#hero"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="홈" data-lang-en="Home">홈</a>
+                    <a href="#about"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="소개" data-lang-en="About">소개</a>
+                    <a href="#career"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="경력 & 기술" data-lang-en="Career & Skills">경력 &
+                        기술</a>
+                    <a href="#projects"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="프로젝트" data-lang-en="Projects">프로젝트</a>
+                    <a href="#socials"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="소셜" data-lang-en="Social">소셜</a>
+
+                    <!-- Language Toggle -->
+                    <div
+                        class="lang-toggle flex items-center space-x-1 border border-navy-600 rounded-lg p-1 bg-navy-800/50">
+                        <button id="lang-kr"
+                            class="active px-3 py-1 text-xs font-medium rounded transition-colors hover:bg-navy-700/50">KR</button>
+                        <span class="text-gray-600">|</span>
+                        <button id="lang-en"
+                            class="px-3 py-1 text-xs font-medium rounded transition-colors hover:bg-navy-700/50">EN</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-300 hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-navy-700/50 pt-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#hero" class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="홈" data-lang-en="Home">홈</a>
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="소개" data-lang-en="About">소개</a>
+                    <a href="#career" class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="경력 & 기술" data-lang-en="Career & Skills">경력 &
+                        기술</a>
+                    <a href="#projects" class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="프로젝트" data-lang-en="Projects">프로젝트</a>
+                    <a href="#socials" class="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                        data-lang-ko="소셜" data-lang-en="Social">소셜</a>
+
+  <!-- 모바일 언어 전환 버튼 추가 -->
+        <div class="pt-4 border-t border-navy-700/50">
+            <div class="lang-toggle flex items-center justify-center space-x-1 border border-navy-600 rounded-lg p-1 bg-navy-800/50">
+                <button id="lang-kr-mobile" class="active flex-1 py-2 text-sm font-medium rounded transition-colors hover:bg-navy-700/50">KR</button>
+                <span class="text-gray-600">|</span>
+                <button id="lang-en-mobile" class="flex-1 py-2 text-sm font-medium rounded transition-colors hover:bg-navy-700/50">EN</button>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero"
+        class="min-h-screen flex items-center justify-center hero-pattern relative overflow-hidden parallax-hero">
+        <!-- Particle Canvas -->
+        <canvas id="particle-canvas"></canvas>
+
+        <!-- Decorative elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-navy-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-6xl mx-auto px-6 py-32 text-center relative z-10">
+            <div class="fade-in">
+                <!-- Badge -->
+                <div
+                    class="inline-flex items-center px-4 py-2 rounded-full bg-navy-700/50 border border-navy-600/50 mb-8">
+                    <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm text-gray-300" data-lang-ko="기아자동차 근무중"
+                        data-lang-en="Working at Kia Motor Company">기아자동차 근무중</span>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    <span class="text-white" data-lang-ko="설비관리" data-lang-en="Facility Management">설비관리</span>
+                    <br>
+                    <span class="gradient-text" data-lang-ko="엔지니어" data-lang-en="Engineer">엔지니어</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
+                    data-ko="<span class='text-accent-gold font-medium'>Siemens PLC</span> & <span class='text-accent-gold font-medium'>Yaskawa 로봇</span> 전문가<br class='hidden md:block'>스마트 팩토리의 안정적인 운영을 책임지는 엔지니어입니다"
+                    data-en="<span class='text-accent-gold font-medium'>Siemens PLC</span> & <span class='text-accent-gold font-medium'>Yaskawa Robot</span> Specialist<br class='hidden md:block'>Engineer ensuring stable operation of smart factories">
+                    <span class="text-accent-gold font-medium">Siemens PLC</span> &
+                    <span class="text-accent-gold font-medium">Yaskawa 로봇</span> 전문가
+                    <br class="hidden md:block">
+                    스마트 팩토리의 안정적인 운영을 책임지는 엔지니어입니다
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#about"
+                        class="group px-8 py-4 bg-gradient-to-r from-navy-600 to-navy-500 rounded-lg font-medium hover:from-navy-500 hover:to-navy-400 transition-all duration-300 flex items-center">
+                        <span data-lang-ko="자세히 보기" data-lang-en="Learn More">자세히 보기</span>
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                    <a href="#socials"
+                        class="px-8 py-4 border border-gray-600 rounded-lg font-medium text-gray-300 hover:border-accent-gold hover:text-accent-gold transition-all duration-300"
+                        data-lang-ko="연락하기" data-lang-en="Contact Me">
+                        연락하기
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-navy-800/50 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-transparent to-navy-900"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="fade-in">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-accent-gold text-sm font-medium tracking-widest uppercase">About Me</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6" data-lang-ko="소개" data-lang-en="About Me">소개
+                    </h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-navy-600 to-accent-gold mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Profile Image Area -->
+                    <div class="relative">
+                        <div
+                            class="aspect-square max-w-md mx-auto rounded-2xl bg-gradient-to-br from-navy-700 to-navy-800 p-1 glow-effect">
+                            <div
+                                class="w-full h-full rounded-2xl bg-navy-800 flex items-center justify-center overflow-hidden p-8">
+                                <!-- Profile Photo -->
+                                <img src="profile.jpg" alt="김민재 프로필 사진" class="profile-img glow-effect mx-auto">
+                            </div>
+                        </div>
+
+                        <!-- Floating badge -->
+                        <div
+                            class="absolute -bottom-4 -right-4 md:right-4 bg-navy-700 border border-navy-600 rounded-xl px-4 py-3 shadow-xl">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">🎓</span>
+                                <div>
+                                    <p class="text-xs text-gray-400" data-lang-ko="전공" data-lang-en="Major">전공</p>
+                                    <p class="text-sm font-medium" data-lang-ko="전기공학"
+                                        data-lang-en="Electrical Engineering">전기공학</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Content -->
+                    <div class="space-y-6">
+                        <h3 id="about-greeting" class="text-2xl font-bold text-white"
+                            data-lang-ko="안녕하세요, 설비관리 엔지니어 김민재입니다"
+                            data-lang-en="Hello, I'm Minjae Kim, Facility Management Engineer">안녕하세요, <span
+                                class="text-accent-gold">설비관리 엔지니어 김민재</span>입니다</h3>
+
+                        <p class="text-gray-400 leading-relaxed"
+                            data-lang-ko="울산공업고등학교 마이스터과정을 거쳐 산업 현장에서 실무 경험을 쌓아왔으며, 현재 울산대학교 전기전자공학부에서 재직자 특별전형으로 이론적 기반을 강화하고 있습니다."
+                            data-lang-en="Gained hands-on experience in industrial settings through the Meister program at Ulsan Mechanical Technical High School, and currently strengthening my theoretical foundation in the Electrical Engineering department at Ulsan University through a special admission program for working professionals.">
+                            울산공업고등학교 마이스터과정을 거쳐 산업 현장에서 실무 경험을 쌓아왔으며, 현재 울산대학교 전기전자공학부에서 재직자 특별전형으로 이론적 기반을 강화하고
+                            있습니다.
+                        </p>
+
+                        <p class="text-gray-400 leading-relaxed"
+                            data-lang-ko="기아자동차 설비관리부에서 Siemens PLC 및 Yaskawa 로봇 기반 생산 라인의 운영 안정화와 설비 최적화를 담당하고 있으며, 제조 현장의 자동화 시스템 구축 및 유지보수 전문성을 보유하고 있습니다."
+                            data-lang-en="Currently working at Kia Motor Company's Facility Management Division, responsible for stabilizing production lines based on Siemens PLC and Yaskawa robotics, with expertise in building and maintaining automation systems in manufacturing environments.">
+                            기아자동차 설비관리부에서 Siemens PLC 및 Yaskawa 로봇 기반 생산 라인의 운영 안정화와 설비 최적화를 담당하고 있으며, 제조 현장의 자동화 시스템 구축
+                            및 유지보수 전문성을 보유하고 있습니다.
+                        </p>
+
+                        <!-- Info Cards -->
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="bg-navy-700/50 rounded-xl p-4 border border-navy-600/50">
+                                <p class="text-accent-gold text-2xl font-bold" data-lang-ko="기아" data-lang-en="Kia">
+                                    기아</p>
+                                <p class="text-gray-400 text-sm" data-lang-ko="자동차" data-lang-en="Motor Company">자동차</p>
+                            </div>
+                            <div class="bg-navy-700/50 rounded-xl p-4 border border-navy-600/50">
+                                <p class="text-accent-gold text-2xl font-bold" data-lang-ko="울산" data-lang-en="Ulsan">울산
+                                </p>
+                                <p class="text-gray-400 text-sm" data-lang-ko="대학교" data-lang-en="University">
+                                    대학교</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Section -->
+                    <div class="mt-16 scroll-fade-in">
+                        <div class="text-center mb-12">
+                            <h3 class="text-2xl font-bold text-white mb-2" data-lang-ko="자격증 및 면허"
+                                data-lang-en="Certifications & Licenses">자격증 및 면허</h3>
+                            <div class="w-16 h-0.5 bg-gradient-to-r from-navy-600 to-accent-gold mx-auto rounded-full">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Cert 1 - 전기기능사 -->
+                            <div
+                                class="cert-card bg-gradient-to-br from-navy-800/80 to-navy-700/80 rounded-xl p-6 border border-navy-600/50">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="w-12 h-12 bg-navy-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs text-accent-gold bg-navy-700/50 px-3 py-1 rounded-full">2018년</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1" data-lang-ko="전기기능사"
+                                    data-lang-en="Industrial Engineer - Electrician">전기기능사</h4>
+                                <p class="text-sm text-gray-400" data-lang-ko="취득" data-lang-en="Obtained">취득</p>
+                            </div>
+
+                            <!-- Cert 2 - 설비보전기능사 -->
+                            <div
+                                class="cert-card bg-gradient-to-br from-navy-800/80 to-navy-700/80 rounded-xl p-6 border border-navy-600/50">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="w-12 h-12 bg-navy-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs text-accent-gold bg-navy-700/50 px-3 py-1 rounded-full">2019년</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1" data-lang-ko="설비보전기능사"
+                                    data-lang-en="Industrial Engineer - Facility Maintenance">설비보전기능사</h4>
+                                <p class="text-sm text-gray-400" data-lang-ko="취득" data-lang-en="Obtained">취득</p>
+                            </div>
+
+                            <!-- Cert 3 - 전자기능사 -->
+                            <div
+                                class="cert-card bg-gradient-to-br from-navy-800/80 to-navy-700/80 rounded-xl p-6 border border-navy-600/50">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="w-12 h-12 bg-navy-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs text-accent-gold bg-navy-700/50 px-3 py-1 rounded-full">2020년</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1" data-lang-ko="전자기능사"
+                                    data-lang-en="Industrial Engineer - Electronics">전자기능사</h4>
+                                <p class="text-sm text-gray-400" data-lang-ko="취득" data-lang-en="Obtained">취득</p>
+                            </div>
+
+                            <!-- Cert 4 - 자동화설비기능사 -->
+                            <div
+                                class="cert-card bg-gradient-to-br from-navy-800/80 to-navy-700/80 rounded-xl p-6 border border-navy-600/50">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="w-12 h-12 bg-navy-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs text-accent-gold bg-navy-700/50 px-3 py-1 rounded-full">2020년</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1" data-lang-ko="자동화설비기능사"
+                                    data-lang-en="Industrial Engineer - Production Automation">자동화설비기능사</h4>
+                                <p class="text-sm text-gray-400" data-lang-ko="취득" data-lang-en="Obtained">취득</p>
+                            </div>
+
+                            <!-- Cert 5 - 1종 대형 면허 -->
+                            <div
+                                class="cert-card bg-gradient-to-br from-navy-800/80 to-navy-700/80 rounded-xl p-6 border border-navy-600/50">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="w-12 h-12 bg-navy-600 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M8 7h12M8 12h12M8 17h12M4 7v.01M4 12v.01M4 17v.01" />
+                                            <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs text-accent-gold bg-navy-700/50 px-3 py-1 rounded-full">2023년</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-1" data-lang-ko="1종 대형 면허"
+                                    data-lang-en="Class 1 Heavy Vehicle License">1종 대형 면허</h4>
+                                <p class="text-sm text-gray-400" data-lang-ko="취득" data-lang-en="Obtained">취득</p>
+                            </div>
+
+                            <!-- Cert 6 - 전기기사 (In Progress) -->
+                            <div
+                                class="cert-card cert-card-progress bg-gradient-to-br from-navy-800/50 to-navy-700/50 rounded-xl p-6 border-2 border-navy-600/30">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="w-12 h-12 bg-navy-700/50 rounded-lg flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                    </div>
+                                    <span
+                                        class="text-xs text-gray-400 bg-navy-800/50 px-3 py-1 rounded-full border border-navy-600/30"
+                                        data-lang-ko="준비 중" data-lang-en="In Progress">준비
+                                        중</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-300 mb-1" data-lang-ko="전기기사"
+                                    data-lang-en="Professional Engineer - Electrical">전기기사</h4>
+                                <p class="text-sm text-gray-500" data-lang-ko="진행 중" data-lang-en="In Progress">진행 중</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Career & Skills Section -->
+    <section id="career" class="py-24 bg-navy-900 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="fade-in">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-accent-gold text-sm font-medium tracking-widest uppercase">Career & Skills</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6" data-lang-ko="경력 & 기술"
+                        data-lang-en="Career & Expertise">경력 & 기술</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-navy-600 to-accent-gold mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Career Timeline -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-8 flex items-center">
+                            <span class="w-10 h-10 bg-navy-700 rounded-lg flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-accent-gold" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </span>
+                            <span data-lang-ko="경력 사항" data-lang-en="Experience">경력 사항</span>
+                        </h3>
+
+                        <div class="relative pl-8 space-y-8">
+                            <!-- Enhanced Timeline Line -->
+                            <div class="absolute left-0 top-0 bottom-0 timeline-gradient"></div>
+
+                            <!-- Career Item 1 - Kia Motor -->
+                            <div
+                                class="relative slide-in-left card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div
+                                    class="absolute -left-[41px] timeline-dot bg-accent-gold rounded-full border-navy-900">
+                                </div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-accent-gold text-sm font-medium" data-lang-ko="현재 재직"
+                                        data-lang-en="Current">현재 재직</span>
+                                    <span class="text-gray-500 text-xs" data-lang-ko="2024 - 현재"
+                                        data-lang-en="2024 - Present">2024 - 현재</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2" data-lang-ko="기아자동차 설비관리부"
+                                    data-lang-en="Kia Motor Company - Facility Management">기아자동차 설비관리부</h4>
+                                <p class="text-gray-400 text-sm mb-3" data-lang-ko="설비관리 엔지니어"
+                                    data-lang-en="Facility Management Engineer">설비관리 엔지니어</p>
+                                <ul class="mt-3 space-y-1 text-sm text-gray-500">
+                                    <li data-lang-ko="• Siemens PLC 전문" data-lang-en="• Siemens PLC Specialist">•
+                                        Siemens PLC 전문</li>
+                                    <li data-lang-ko="• Yaskawa 로봇 전문" data-lang-en="• Yaskawa Robotics Specialist">•
+                                        Yaskawa 로봇 전문</li>
+                                    <li data-lang-ko="• 생산 라인 설비 유지보수"
+                                        data-lang-en="• Production Line Equipment Maintenance">• 생산 라인 설비 유지보수</li>
+                                </ul>
+                            </div>
+
+                            <!-- Career Item 2 - University -->
+                            <div
+                                class="relative slide-in-left card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div
+                                    class="absolute -left-[41px] timeline-dot bg-accent-gold rounded-full border-navy-900">
+                                </div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-accent-gold text-sm font-medium" data-lang-ko="재학 중"
+                                        data-lang-en="Currently Enrolled">재학 중</span>
+                                    <span class="text-gray-500 text-xs" data-lang-ko="2025 - 현재"
+                                        data-lang-en="2025 - Present">2025 - 현재</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2" data-lang-ko="울산대학교"
+                                    data-lang-en="Ulsan University">울산대학교</h4>
+                                <p class="text-gray-400 text-sm mb-3" data-lang-ko="전기전자공학부 전기전공"
+                                    data-lang-en="Electrical Engineering">전기전자공학부 전기전공</p>
+                                <div
+                                    class="flex items-center gap-2 mt-3 bg-navy-700/30 rounded-lg p-3 border border-accent-gold/20">
+                                    <svg class="w-5 h-5 text-accent-gold flex-shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                    <span class="text-accent-gold text-sm font-semibold"
+                                        data-lang-ko="1학년 1·2학기 만점(4.5/4.5) 취득 - 수석"
+                                        data-lang-en="Perfect GPA (4.5/4.5) - Top of Class for First Year">1학년 1·2학기
+                                        만점(4.5/4.5) 취득 -
+                                        수석</span>
+                                </div>
+                            </div>
+
+                            <!-- Career Item 3 - Hyundai Heavy Industries -->
+                            <div
+                                class="relative slide-in-left card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div
+                                    class="absolute -left-[41px] timeline-dot bg-navy-600 rounded-full border-navy-900">
+                                </div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-400 text-sm font-medium" data-lang-ko="경력"
+                                        data-lang-en="Experience">경력</span>
+                                    <span class="text-gray-500 text-xs" data-lang-ko="2년"
+                                        data-lang-en="2 years">2년</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2" data-lang-ko="현대중공업 보전부"
+                                    data-lang-en="Hyundai Heavy Industries - Maintenance">현대중공업 보전부</h4>
+                                <p class="text-gray-400 text-sm" data-lang-ko="보전 엔지니어"
+                                    data-lang-en="Maintenance Engineer">보전 엔지니어</p>
+                                <ul class="mt-3 space-y-1 text-sm text-gray-500">
+                                    <li data-lang-ko="• 중장비 설비 유지보수" data-lang-en="• Heavy Equipment Maintenance">• 중장비
+                                        설비 유지보수</li>
+                                    <li data-lang-ko="• 예방 정비 업무" data-lang-en="• Preventive Maintenance">• 예방 정비 업무
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Career Item 4 - Air Force -->
+                            <div
+                                class="relative slide-in-left card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div
+                                    class="absolute -left-[41px] timeline-dot bg-navy-600 rounded-full border-navy-900">
+                                </div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-400 text-sm font-medium" data-lang-ko="병역"
+                                        data-lang-en="Military Service">병역</span>
+                                    <span class="text-gray-500 text-xs">2021 - 2022</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2" data-lang-ko="육군 전력설비병"
+                                    data-lang-en="ROKA - Power Facility Specialist">육군 전력설비병</h4>
+                                <p class="text-gray-400 text-sm" data-lang-ko="전력 설비 관리"
+                                    data-lang-en="Power Facility Management">전력 설비 관리</p>
+                                <ul class="mt-3 space-y-1 text-sm text-gray-500">
+                                    <li data-lang-ko="• 기지 전력 설비 운영" data-lang-en="• Base Power Facility Operations">•
+                                        기지 전력 설비 운영</li>
+                                    <li data-lang-ko="• 전기 시스템 점검 및 정비"
+                                        data-lang-en="• Electrical System Inspection & Maintenance">• 전기 시스템 점검 및 정비
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Education - High School -->
+                            <div
+                                class="relative slide-in-left card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div
+                                    class="absolute -left-[41px] timeline-dot bg-navy-600 rounded-full border-navy-900">
+                                </div>
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-gray-400 text-sm font-medium" data-lang-ko="학력"
+                                        data-lang-en="Education">학력</span>
+                                    <span class="text-gray-500 text-xs" data-lang-ko="졸업"
+                                        data-lang-en="Graduated">졸업</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2" data-lang-ko="울산공업고등학교"
+                                    data-lang-en="Busan Mechanical Technical High School">울산공업고등학교</h4>
+                                <p class="text-gray-400 text-sm" data-lang-ko="마이스터고 · 전기과"
+                                    data-lang-en="Meister Program - Electrical Engineering">마이스터고 · 전기과</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-8 flex items-center">
+                            <span class="w-10 h-10 bg-navy-700 rounded-lg flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-accent-gold" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </span>
+                            <span data-lang-ko="전문 기술" data-lang-en="Skills">전문 기술</span>
+                        </h3>
+
+                        <div class="space-y-6">
+                            <!-- Skill 1 -->
+                            <div class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-medium">Siemens PLC (TIA Portal)</span>
+                                    <span class="text-accent-gold text-sm">Expert</span>
+                                </div>
+                                <div class="h-2 bg-navy-700 rounded-full overflow-hidden">
+                                    <div class="skill-bar h-full bg-gradient-to-r from-navy-500 to-accent-gold rounded-full"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 2 -->
+                            <div class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-medium" data-lang-ko="Yaskawa 로봇 프로그래밍"
+                                        data-lang-en="Yaskawa Robot Programming">Yaskawa 로봇 프로그래밍</span>
+                                    <span class="text-accent-gold text-sm">Advanced</span>
+                                </div>
+                                <div class="h-2 bg-navy-700 rounded-full overflow-hidden">
+                                    <div class="skill-bar h-full bg-gradient-to-r from-navy-500 to-accent-gold rounded-full"
+                                        style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 3 -->
+                            <div class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-medium" data-lang-ko="설비 유지보수"
+                                        data-lang-en="Facility Maintenance">설비 유지보수</span>
+                                    <span class="text-accent-gold text-sm">Expert</span>
+                                </div>
+                                <div class="h-2 bg-navy-700 rounded-full overflow-hidden">
+                                    <div class="skill-bar h-full bg-gradient-to-r from-navy-500 to-accent-gold rounded-full"
+                                        style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 4 -->
+                            <div class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="font-medium" data-lang-ko="전기 회로 설계"
+                                        data-lang-en="Electrical Circuit Design">전기 회로 설계</span>
+                                    <span class="text-accent-gold text-sm">Advanced</span>
+                                </div>
+                                <div class="h-2 bg-navy-700 rounded-full overflow-hidden">
+                                    <div class="skill-bar h-full bg-gradient-to-r from-navy-500 to-accent-gold rounded-full"
+                                        style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Tech Tags -->
+                            <div class="flex flex-wrap gap-2 pt-4">
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-400">TIA
+                                    Portal</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-400">HMI</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-400">MES</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-400">AutoCAD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects & Achievements Section -->
+    <section id="projects" class="py-24 bg-navy-800/50 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-transparent to-navy-900"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="scroll-fade-in">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-accent-gold text-sm font-medium tracking-widest uppercase">Projects &
+                        Achievements</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6" data-lang-ko="프로젝트 및 실적"
+                        data-lang-en="Projects & Achievements">프로젝트 및 실적</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-navy-600 to-accent-gold mx-auto rounded-full"></div>
+                    <p class="text-gray-400 mt-6 max-w-2xl mx-auto" data-lang-ko="현장에서 검증된 문제 해결 능력과 정량적 성과"
+                        data-lang-en="Proven Problem-Solving Skills with Quantifiable Results">
+                        현장에서 검증된 문제 해결 능력과 정량적 성과
+                    </p>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Project 1 - Module Mounting Machine -->
+                    <div
+                        class="scroll-fade-in card-hover bg-gradient-to-br from-navy-800/90 to-navy-700/90 rounded-2xl p-8 border border-navy-600/50">
+                        <!-- Icon & Period -->
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="w-14 h-14 bg-navy-600 rounded-xl flex items-center justify-center">
+                                <svg class="w-7 h-7 text-accent-gold" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400 bg-navy-700/50 px-3 py-1 rounded-full">2025</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold text-white mb-4" data-lang-ko="모듈 장착기 회로 개선 프로젝트"
+                            data-lang-en="Module Mounting Machine Circuit Optimization">모듈 장착기 회로 개선 프로젝트</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6"
+                            data-lang-ko="모듈 이탈 불량을 근본적으로 해결하기 위해 Siemens PLC 제어 로직을 재설계하였습니다. 기존 회로에 장비 간 인터록 신호를 추가 구성하여 작업 안정성을 확보하고, 불량 발생 시 즉각적인 라인 정지가 가능하도록 개선하였습니다."
+                            data-lang-en="Redesigned Siemens PLC control logic to fundamentally resolve module detachment defects. Enhanced operational stability by implementing inter-equipment interlock signals and enabled immediate line shutdowns upon defect detection.">
+                            모듈 이탈 불량을 근본적으로 해결하기 위해 Siemens PLC 제어 로직을 재설계하였습니다.
+                            기존 회로에 장비 간 인터록 신호를 추가 구성하여 작업 안정성을 확보하고,
+                            불량 발생 시 즉각적인 라인 정지가 가능하도록 개선하였습니다.
+                        </p>
+
+                        <!-- Technologies -->
+                        <div class="mb-6">
+                            <p class="text-xs text-gray-500 mb-2" data-lang-ko="사용 기술" data-lang-en="Technologies Used">
+                                사용 기술</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300">Siemens
+                                    PLC</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300">TIA
+                                    Portal</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300"
+                                    data-lang-ko="인터록 회로 설계" data-lang-en="Interlock Circuit Design">인터록
+                                    회로 설계</span>
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="border-t border-navy-600/30 pt-6">
+                            <p class="text-xs text-gray-500 mb-3" data-lang-ko="정량적 성과" data-lang-en="Results">정량적 성과
+                            </p>
+                            <div class="space-y-2">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-400" data-lang-ko="연간 비용 절감"
+                                        data-lang-en="Annual Cost Reduction">연간 비용 절감</span>
+                                    <span class="text-lg font-bold text-accent-gold" data-lang-ko="₩8,880,696원"
+                                        data-lang-en="₩8,880,696 KRW">₩8,880,696원</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-400" data-lang-ko="월평균 효과"
+                                        data-lang-en="Monthly Savings">월평균 효과</span>
+                                    <span class="text-base font-semibold text-accent-gold" data-lang-ko="₩740,058원"
+                                        data-lang-en="₩740,058 KRW">₩740,058원</span>
+                                </div>
+                                <div class="mt-3 bg-navy-700/30 rounded-lg p-3">
+                                    <p class="text-sm text-accent-gold font-medium" data-lang-ko="✓ 모듈 이탈 불량률 대폭 감소"
+                                        data-lang-en="✓ Significant Reduction in Module Detachment Defects">✓ 모듈 이탈 불량률
+                                        대폭 감소</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - MES Integration -->
+                    <div
+                        class="scroll-fade-in card-hover bg-gradient-to-br from-navy-800/90 to-navy-700/90 rounded-2xl p-8 border border-navy-600/50">
+                        <!-- Icon & Period -->
+                        <div class="flex items-start justify-between mb-6">
+                            <div class="w-14 h-14 bg-navy-600 rounded-xl flex items-center justify-center">
+                                <svg class="w-7 h-7 text-accent-gold" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs text-gray-400 bg-navy-700/50 px-3 py-1 rounded-full">2025</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-xl font-bold text-white mb-4" data-lang-ko="MES 연동 및 실시간 알람 시스템 구축"
+                            data-lang-en="MES Integration & Real-Time Alarm System Implementation">MES 연동 및 실시간 알람 시스템
+                            구축</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6"
+                            data-lang-ko="MES 통신 기반 실시간 모니터링 체계가 부재한 환경에서, 제어반과 장비 간 인터록 회로를 신규 구성하고 TIA Portal을 통해 이상 알람 태그를 추가하였습니다. 이를 통해 설비 이상 발생 시 즉각적인 감지 및 대응이 가능해져 라인 가동률이 크게 향상되었습니다."
+                            data-lang-en="Established interlock circuits between control panels and equipment and added alarm tags via TIA Portal in an environment lacking MES-based real-time monitoring. This enabled immediate detection and response to equipment abnormalities, significantly improving line uptime.">
+                            MES 통신 기반 실시간 모니터링 체계가 부재한 환경에서, 제어반과 장비 간 인터록 회로를 신규 구성하고
+                            TIA Portal을 통해 이상 알람 태그를 추가하였습니다. 이를 통해 설비 이상 발생 시 즉각적인 감지 및
+                            대응이 가능해져 라인 가동률이 크게 향상되었습니다.
+                        </p>
+
+                        <!-- Technologies -->
+                        <div class="mb-6">
+                            <p class="text-xs text-gray-500 mb-2" data-lang-ko="사용 기술" data-lang-en="Technologies Used">
+                                사용 기술</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300"
+                                    data-lang-ko="MES 통신" data-lang-en="MES Communication">MES
+                                    통신</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300">TIA
+                                    Portal</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300"
+                                    data-lang-ko="인터록 회로" data-lang-en="Interlock Circuit">인터록
+                                    회로</span>
+                                <span
+                                    class="px-3 py-1 bg-navy-700/50 border border-navy-600/50 rounded-full text-xs text-gray-300"
+                                    data-lang-ko="알람 시스템" data-lang-en="Alarm System">알람
+                                    시스템</span>
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="border-t border-navy-600/30 pt-6">
+                            <p class="text-xs text-gray-500 mb-3" data-lang-ko="정량적 성과" data-lang-en="Results">정량적 성과
+                            </p>
+                            <div class="space-y-3">
+                                <div class="bg-navy-700/30 rounded-lg p-3">
+                                    <p class="text-sm text-accent-gold font-medium" data-lang-ko="✓ 라인 가동률 향상"
+                                        data-lang-en="✓ Improved Line Uptime">✓ 라인 가동률 향상</p>
+                                </div>
+                                <div class="bg-navy-700/30 rounded-lg p-3">
+                                    <p class="text-sm text-accent-gold font-medium" data-lang-ko="✓ 설비 이상 대응 시간 단축"
+                                        data-lang-en="✓ Reduced Equipment Response Time">✓ 설비 이상 대응 시간 단축</p>
+                                </div>
+                                <div class="bg-navy-700/30 rounded-lg p-3">
+                                    <p class="text-sm text-accent-gold font-medium" data-lang-ko="✓ 실시간 모니터링 체계 구축"
+                                        data-lang-en="✓ Established Real-Time Monitoring System">✓ 실시간 모니터링 체계 구축</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="socials" class="py-24 bg-navy-800/50 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-transparent to-navy-900"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="fade-in">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span class="text-accent-gold text-sm font-medium tracking-widest uppercase">Socials</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-4 mb-6" data-lang-ko="소셜 & 연락처"
+                        data-lang-en="Connect With Me">소셜 & 연락처</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-navy-600 to-accent-gold mx-auto rounded-full"></div>
+                    <p class="text-gray-400 mt-6 max-w-lg mx-auto" data-lang-ko="더 많은 콘텐츠와 소통을 원하신다면 아래 채널을 방문해주세요"
+                        data-lang-en="Visit my channels to explore more content and connect">
+                        더 많은 콘텐츠와 소통을 원하신다면 아래 채널을 방문해주세요
+                    </p>
+                </div>
+
+                <!-- YouTube Featured Card -->
+                <div class="max-w-2xl mx-auto mb-12">
+                    <a href="https://www.youtube.com/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="group block card-hover bg-gradient-to-br from-navy-800 to-navy-700 rounded-2xl p-8 border border-navy-600/50 youtube-glow relative overflow-hidden">
+                        <!-- Decorative gradient -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"></div>
+
+                        <div class="flex flex-col md:flex-row items-center gap-6 relative z-10">
+                            <!-- YouTube Icon -->
+                            <div
+                                class="w-20 h-20 bg-red-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-10 h-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </div>
+
+                            <div class="flex-1 text-center md:text-left">
+                                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors"
+                                    data-lang-ko="YouTube 채널" data-lang-en="YouTube Channel">
+                                    YouTube 채널
+                                </h3>
+                                <p class="text-gray-400 mb-4" data-lang-ko="YouTube를 통해 영상 시청이 가능합니다"
+                                    data-lang-en="Watch my videos on YouTube">
+                                    YouTube를 통해 영상 시청이 가능합니다
+                                </p>
+                                <div class="inline-flex items-center text-red-400 font-medium" data-lang-ko="채널 방문하기"
+                                    data-lang-en="Visit Channel">
+                                    채널 방문하기
+                                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Other Social Links -->
+                <div class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+                    <!-- Email -->
+                    <button id="emailBtn"
+                        class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50 text-center group cursor-pointer w-40">
+                        <div
+                            class="w-12 h-12 mx-auto bg-navy-700 rounded-lg flex items-center justify-center mb-3 group-hover:bg-navy-600 transition-colors">
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-300" data-lang-ko="이메일" data-lang-en="Email">이메일</p>
+                    </button>
+
+                    <!-- LinkedIn -->
+                    <a href="http://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+                        class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50 text-center group w-40">
+                        <div
+                            class="w-12 h-12 mx-auto bg-navy-700 rounded-lg flex items-center justify-center mb-3 group-hover:bg-navy-600 transition-colors">
+                            <svg class="w-6 h-6 text-accent-gold" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-300">LinkedIn</p>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/instagram/" target="_blank" rel="noopener noreferrer"
+                        class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50 text-center group w-40">
+                        <div
+                            class="w-12 h-12 mx-auto bg-navy-700 rounded-lg flex items-center justify-center mb-3 group-hover:bg-navy-600 transition-colors">
+                            <svg class="w-6 h-6 text-accent-gold" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-300">Instagram</p>
+                    </a>
+
+                    <!-- PDF 다운로드 버튼 -->
+                    <button id="downloadPdfBtn"
+                        class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50 text-center group cursor-pointer w-40">
+                        <div
+                            class="w-12 h-12 mx-auto bg-navy-700 rounded-lg flex items-center justify-center mb-3 group-hover:bg-navy-600 transition-colors">
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-300" data-lang-ko="PDF 이력서" data-lang-en="PDF Resume">PDF 이력서</p>
+                    </button>
+
+                    <!-- vCard 다운로드 버튼 -->
+                    <button id="downloadVcardBtn"
+                        class="card-hover bg-navy-800/50 rounded-xl p-6 border border-navy-700/50 text-center group cursor-pointer w-40">
+                        <div
+                            class="w-12 h-12 mx-auto bg-navy-700 rounded-lg flex items-center justify-center mb-3 group-hover:bg-navy-600 transition-colors">
+                            <svg class="w-6 h-6 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <p class="text-sm font-medium text-gray-300" data-lang-ko="명함 저장" data-lang-en="Save Contact">명함 저장</p>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Modal -->
+    <div id="emailModal"
+        class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+        <div
+            class="modal-content bg-gradient-to-br from-navy-800 to-navy-700 rounded-2xl p-8 border border-navy-600/50 glow-effect max-w-md w-full mx-4 relative">
+            <!-- Close Button -->
+            <button id="closeModal"
+                class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-navy-600 transition-colors text-gray-400 hover:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="text-center">
+                <div class="w-16 h-16 mx-auto bg-navy-600 rounded-2xl flex items-center justify-center mb-4">
+                    <svg class="w-8 h-8 text-accent-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+
+                <h3 class="text-2xl font-bold text-white mb-2">이메일 주소</h3>
+                <p class="text-gray-400 text-sm mb-6">아래 주소로 연락 주세요</p>
+
+                <div class="bg-navy-900/50 rounded-lg p-4 mb-4 border border-navy-600/30">
+                    <p id="emailText" class="text-accent-gold text-lg font-medium select-all">minjae5121@naver.com</p>
+                </div>
+
+                <button id="copyBtn"
+                    class="copy-button w-full px-6 py-3 bg-navy-600 hover:bg-navy-500 rounded-lg font-medium text-white transition-all duration-300 flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    <span id="copyText">복사</span>
+                </button>
+
+                <p id="copySuccess" class="copy-success text-accent-gold text-sm mt-3 opacity-0">✓ 복사되었습니다!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-navy-900 border-t border-navy-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2026 김민재. All rights reserved.
+                </p>
+                <p class="text-gray-500 text-sm" data-lang-ko="기아자동차 | Siemens PLC | Yaskawa 로봇"
+                    data-lang-en="Facility Management Engineer Specializing in Siemens PLC & Yaskawa Robotics">
+                    기아자동차 | Siemens PLC | Yaskawa 로봇
+                </p>
+                <a href="mailto:contact@portailor.com" class="portailor-branding">
+                    Designed & Developed by Portailor
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+//// ============================================
+// 📊 포트폴리오 데이터 관리 객체
+// ============================================
+// 🎯 **사용법**: 새로운 클라이언트를 위해 이 객체의 값만 수정하면
+//              전체 포트폴리오 내용이 자동으로 업데이트됩니다.
+// 
+// 💡 **주의사항**:
+//    - 모든 텍스트는 한국어(ko)와 영어(en) 버전을 모두 제공
+//    - HTML 태그는 사용하지 말고 순수 텍스트만 입력
+//    - 배열 항목 추가/삭제 시 쉼표(,) 주의
+
+const PORTFOLIO_DATA = {
+    // ========================================
+    // 기본 정보
+    // ========================================
+    personal: {
+        name: {
+            ko: "김민재",
+            en: "Minjae Kim"
+        },
+        title: {
+            ko: "설비관리 엔지니어",
+            en: "Facility Management Engineer"
+        },
+        company: {
+            ko: "기아자동차",
+            en: "Kia Motor Company"
+        },
+        email: "minjae5121@naver.com",
+        profileImage: "profile.jpg",  // 프로필 이미지 파일명
+        specialty: {
+            ko: "Siemens PLC & Yaskawa 로봇 전문가",
+            en: "Siemens PLC & Yaskawa Robot Specialist"
+        },
+        status: {
+            ko: "기아자동차 근무중",
+            en: "Working at Kia Motor Company"
+        },
+        major: {
+            ko: "전기공학",
+            en: "Electrical Engineering"
+        }
+    },
+
+    // ========================================
+    // About 섹션 소개글
+    // ========================================
+    about: {
+        greeting: {
+            ko: "안녕하세요, 설비관리 엔지니어 김민재입니다",
+            en: "Hello, I'm Minjae Kim, Facility Management Engineer"
+        },
+        paragraph1: {
+            ko: "울산공업고등학교 마이스터과정을 거쳐 산업 현장에서 실무 경험을 쌓아왔으며, 현재 울산대학교 전기전자공학부에서 재직자 특별전형으로 이론적 기반을 강화하고 있습니다.",
+            en: "Gained hands-on experience in industrial settings through the Meister program at Ulsan Mechanical Technical High School, and currently strengthening my theoretical foundation in the Electrical Engineering department at Ulsan University through a special admission program for working professionals."
+        },
+        paragraph2: {
+            ko: "기아자동차 설비관리부에서 Siemens PLC 및 Yaskawa 로봇 기반 생산 라인의 운영 안정화와 설비 최적화를 담당하고 있으며, 제조 현장의 자동화 시스템 구축 및 유지보수 전문성을 보유하고 있습니다.",
+            en: "Currently working at Kia Motor Company's Facility Management Division, responsible for stabilizing production lines based on Siemens PLC and Yaskawa robotics, with expertise in building and maintaining automation systems in manufacturing environments."
+        }
+    },
+
+    // ========================================
+    // 학력 정보
+    // ========================================
+    education: {
+        university: {
+            name: { ko: "울산대학교", en: "Ulsan University" },
+            major: { ko: "전기전자공학부 전기전공", en: "Electrical Engineering" }
+        },
+        highSchool: {
+            name: { ko: "울산공업고등학교", en: "Ulsan Mechanical Technical High School" },
+            type: { ko: "마이스터고 · 전기과", en: "Meister Program - Electrical Engineering" }
+        }
+    },
+
+    // ========================================
+    // 자격증 배열 (동적 카드 생성용)
+    // ========================================
+    certifications: [
+        {
+            id: 1,
+            icon: "electricity",  // 아이콘 타입
+            name: { ko: "전기기능사", en: "Industrial Engineer - Electrician" },
+            year: { ko: "2018년", en: "2018" },
+            status: { ko: "취득", en: "Obtained" },
+            inProgress: false  // false: 취득완료, true: 준비중
+        },
+        {
+            id: 2,
+            icon: "maintenance",
+            name: { ko: "설비보전기능사", en: "Industrial Engineer - Facility Maintenance" },
+            year: { ko: "2019년", en: "2019" },
+            status: { ko: "취득", en: "Obtained" },
+            inProgress: false
+        },
+        {
+            id: 3,
+            icon: "electronics",
+            name: { ko: "전자기능사", en: "Industrial Engineer - Electronics" },
+            year: { ko: "2020년", en: "2020" },
+            status: { ko: "취득", en: "Obtained" },
+            inProgress: false
+        },
+        {
+            id: 4,
+            icon: "automation",
+            name: { ko: "자동화설비기능사", en: "Industrial Engineer - Production Automation" },
+            year: { ko: "2020년", en: "2020" },
+            status: { ko: "취득", en: "Obtained" },
+            inProgress: false
+        },
+        {
+            id: 5,
+            icon: "license",
+            name: { ko: "1종 대형 면허", en: "Class 1 Heavy Vehicle License" },
+            year: { ko: "2023년", en: "2023" },
+            status: { ko: "취득", en: "Obtained" },
+            inProgress: false
+        },
+        {
+            id: 6,
+            icon: "electricity",
+            name: { ko: "전기기사", en: "Professional Engineer - Electrical" },
+            year: { ko: "준비 중", en: "In Progress" },
+            status: { ko: "진행 중", en: "In Progress" },
+            inProgress: true  // 준비 중인 자격증
+        }
+    ],
+
+    // ========================================
+    // 경력 타임라인 배열
+    // ========================================
+    career: [
+        {
+            id: 1,
+            isCurrent: true,  // 현재 재직중 여부
+            company: { 
+                ko: "기아자동차 설비관리부", 
+                en: "Kia Motor Company - Facility Management" 
+            },
+            position: { 
+                ko: "설비관리 엔지니어", 
+                en: "Facility Management Engineer" 
+            },
+            period: { ko: "2024 - 현재", en: "2024 - Present" },
+            periodLabel: { ko: "현재 재직", en: "Current" },
+            details: {
+                ko: [
+                    "Siemens PLC 전문",
+                    "Yaskawa 로봇 전문",
+                    "생산 라인 설비 유지보수"
+                ],
+                en: [
+                    "Siemens PLC Specialist",
+                    "Yaskawa Robotics Specialist",
+                    "Production Line Equipment Maintenance"
+                ]
+            }
+        },
+        {
+            id: 2,
+            isCurrent: true,
+            company: { ko: "울산대학교", en: "Ulsan University" },
+            position: { 
+                ko: "전기전자공학부 전기전공", 
+                en: "Electrical Engineering" 
+            },
+            period: { ko: "2025 - 현재", en: "2025 - Present" },
+            periodLabel: { ko: "재학 중", en: "Currently Enrolled" },
+            highlight: {
+                ko: "1학년 1·2학기 만점(4.5/4.5) 취득 - 수석",
+                en: "Perfect GPA (4.5/4.5) - Top of Class for First Year"
+            }
+        },
+        {
+            id: 3,
+            isCurrent: false,
+            company: { 
+                ko: "현대중공업 보전부", 
+                en: "Hyundai Heavy Industries - Maintenance" 
+            },
+            position: { ko: "보전 엔지니어", en: "Maintenance Engineer" },
+            period: { ko: "2년", en: "2 years" },
+            periodLabel: { ko: "경력", en: "Experience" },
+            details: {
+                ko: ["중장비 설비 유지보수", "예방 정비 업무"],
+                en: ["Heavy Equipment Maintenance", "Preventive Maintenance"]
+            }
+        },
+        {
+            id: 4,
+            isCurrent: false,
+            company: { 
+                ko: "육군 전력설비병", 
+                en: "ROKA - Power Facility Specialist" 
+            },
+            position: { ko: "전력 설비 관리", en: "Power Facility Management" },
+            period: { ko: "2021 - 2022", en: "2021 - 2022" },
+            periodLabel: { ko: "병역", en: "Military Service" },
+            details: {
+                ko: ["기지 전력 설비 운영", "전기 시스템 점검 및 정비"],
+                en: ["Base Power Facility Operations", "Electrical System Inspection & Maintenance"]
+            }
+        },
+        {
+            id: 5,
+            isCurrent: false,
+            isEducation: true,  // 학력 항목
+            company: { 
+                ko: "울산공업고등학교", 
+                en: "Ulsan Mechanical Technical High School" 
+            },
+            position: { ko: "마이스터고 · 전기과", en: "Meister Program - Electrical Engineering" },
+            period: { ko: "졸업", en: "Graduated" },
+            periodLabel: { ko: "학력", en: "Education" }
+        }
+    ],
+
+    // ========================================
+    // 기술 스택 배열
+    // ========================================
+    skills: [
+        {
+            id: 1,
+            name: "Siemens PLC (TIA Portal)",
+            nameTranslated: { ko: "Siemens PLC (TIA Portal)", en: "Siemens PLC (TIA Portal)" },
+            level: 90,  // 숙련도 (0-100)
+            levelText: "Expert"
+        },
+        {
+            id: 2,
+            name: { ko: "Yaskawa 로봇 프로그래밍", en: "Yaskawa Robot Programming" },
+            level: 85,
+            levelText: "Advanced"
+        },
+        {
+            id: 3,
+            name: { ko: "설비 유지보수", en: "Facility Maintenance" },
+            level: 95,
+            levelText: "Expert"
+        },
+        {
+            id: 4,
+            name: { ko: "전기 회로 설계", en: "Electrical Circuit Design" },
+            level: 80,
+            levelText: "Advanced"
+        }
+    ],
+
+    // ========================================
+    // 프로젝트 배열
+    // ========================================
+    projects: [
+        {
+            id: 1,
+            year: "2025",
+            icon: "module",
+            title: {
+                ko: "모듈 장착기 회로 개선 프로젝트",
+                en: "Module Mounting Machine Circuit Optimization"
+            },
+            description: {
+                ko: "모듈 이탈 불량을 근본적으로 해결하기 위해 Siemens PLC 제어 로직을 재설계하였습니다. 기존 회로에 장비 간 인터록 신호를 추가 구성하여 작업 안정성을 확보하고, 불량 발생 시 즉각적인 라인 정지가 가능하도록 개선하였습니다.",
+                en: "Redesigned Siemens PLC control logic to fundamentally resolve module detachment defects. Enhanced operational stability by implementing inter-equipment interlock signals and enabled immediate line shutdowns upon defect detection."
+            },
+            technologies: {
+                ko: ["Siemens PLC", "TIA Portal", "인터록 회로 설계"],
+                en: ["Siemens PLC", "TIA Portal", "Interlock Circuit Design"]
+            },
+            results: {
+                annualSavings: 8880696,  // 연간 절감액 (숫자만)
+                monthlySavings: 740058,  // 월간 절감액
+                achievements: {
+                    ko: ["모듈 이탈 불량률 대폭 감소"],
+                    en: ["Significant Reduction in Module Detachment Defects"]
+                }
+            }
+        },
+        {
+            id: 2,
+            year: "2025",
+            icon: "mes",
+            title: {
+                ko: "MES 연동 및 실시간 알람 시스템 구축",
+                en: "MES Integration & Real-Time Alarm System Implementation"
+            },
+            description: {
+                ko: "MES 통신 기반 실시간 모니터링 체계가 부재한 환경에서, 제어반과 장비 간 인터록 회로를 신규 구성하고 TIA Portal을 통해 이상 알람 태그를 추가하였습니다. 이를 통해 설비 이상 발생 시 즉각적인 감지 및 대응이 가능해져 라인 가동률이 크게 향상되었습니다.",
+                en: "Established interlock circuits between control panels and equipment and added alarm tags via TIA Portal in an environment lacking MES-based real-time monitoring. This enabled immediate detection and response to equipment abnormalities, significantly improving line uptime."
+            },
+            technologies: {
+                ko: ["MES 통신", "TIA Portal", "인터록 회로", "알람 시스템"],
+                en: ["MES Communication", "TIA Portal", "Interlock Circuit", "Alarm System"]
+            },
+            results: {
+                achievements: {
+                    ko: [
+                        "라인 가동률 향상",
+                        "설비 이상 대응 시간 단축",
+                        "실시간 모니터링 체계 구축"
+                    ],
+                    en: [
+                        "Improved Line Uptime",
+                        "Reduced Equipment Response Time",
+                        "Established Real-Time Monitoring System"
+                    ]
+                }
+            }
+        }
+    ],
+
+    // ========================================
+    // 소셜 링크
+    // ========================================
+    social: {
+        youtube: "https://www.youtube.com/",
+        linkedin: "http://www.linkedin.com/",
+        instagram: "https://www.instagram.com/instagram./"
+    },
+
+    // ========================================
+    // SEO 메타데이터 (나중에 사용)
+    // ========================================
+    seo: {
+        title: "Portfolio | 설비관리 엔지니어 김민재",
+        description: "기아자동차 설비관리 엔지니어 김민재 포트폴리오 - Siemens PLC, Yaskawa 로봇 전문가",
+        keywords: "설비관리, 엔지니어, 기아자동차, PLC, 로봇, 전기공학",
+        ogImage: "profile.jpg",
+        siteUrl: "https://portailor.github.io/website-demo/"  // 🔴 실제 배포 URL로 변경 필요!
+    }
+};
+
+//// ============================================
+// 🔄 데이터 주입 시스템
+// ============================================
+// PORTFOLIO_DATA 객체의 데이터를 HTML 요소에 자동으로 삽입합니다.
+// 현재 언어 가져오기 (기존 언어 시스템 활용)
+function getCurrentLang() {
+    return currentLang || 'ko';
+}
+// 다국어 텍스트 추출 헬퍼 함수
+function getText(dataObj) {
+    const lang = getCurrentLang();
+    if (typeof dataObj === 'object' && dataObj.ko && dataObj.en) {
+        return dataObj[lang] || dataObj.ko;
+    }
+    return dataObj;
+}
+// ============================================
+// 1️⃣ 자격증 카드 동적 생성
+// ============================================
+function renderCertifications() {
+    // 자격증 그리드 컨테이너 찾기
+    const container = document.querySelector('#about .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3');
+    if (!container) {
+        console.warn('자격증 컨테이너를 찾을 수 없습니다.');
+        return;
+    }
+    // 아이콘 SVG 맵핑
+    const iconSVG = {
+        electricity: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />`,
+        maintenance: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />`,
+        electronics: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />`,
+        automation: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />`,
+        license: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12M8 12h12M8 17h12M4 7v.01M4 12v.01M4 17v.01" /><circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />`
+    };
+    // HTML 생성
+    const html = PORTFOLIO_DATA.certifications.map(cert => {
+        const lang = getCurrentLang();
+        const progressClass = cert.inProgress ? 'cert-card-progress' : '';
+        const bgOpacity = cert.inProgress ? 'from-navy-800/50 to-navy-700/50' : 'from-navy-800/80 to-navy-700/80';
+        const borderStyle = cert.inProgress ? 'border-2 border-navy-600/30' : 'border-navy-600/50';
+        const iconBg = cert.inProgress ? 'bg-navy-700/50' : 'bg-navy-600';
+        const iconColor = cert.inProgress ? 'text-gray-400' : 'text-accent-gold';
+        const yearBg = cert.inProgress ? 'text-gray-400 bg-navy-800/50 border border-navy-600/30' : 'text-accent-gold bg-navy-700/50';
+        const textColor = cert.inProgress ? 'text-gray-300' : 'text-white';
+        const statusColor = cert.inProgress ? 'text-gray-500' : 'text-gray-400';
+        return `
+            <div class="cert-card ${progressClass} bg-gradient-to-br ${bgOpacity} rounded-xl p-6 border ${borderStyle}">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="w-12 h-12 ${iconBg} rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 ${iconColor}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            ${iconSVG[cert.icon] || iconSVG.electricity}
+                        </svg>
+                    </div>
+                    <span class="text-xs ${yearBg} px-3 py-1 rounded-full">${getText(cert.year)}</span>
+                </div>
+                <h4 class="text-lg font-bold ${textColor} mb-1">${getText(cert.name)}</h4>
+                <p class="text-sm ${statusColor}">${getText(cert.status)}</p>
+            </div>
+        `;
+    }).join('');
+    container.innerHTML = html;
+}
+// ============================================
+// 2️⃣ 이메일 주소 업데이트
+// ============================================
+function updateContactInfo() {
+    // 이메일 모달의 이메일 주소
+    const emailText = document.getElementById('emailText');
+    if (emailText) {
+        emailText.textContent = PORTFOLIO_DATA.personal.email;
+    }
+    // 복사 버튼 이벤트도 업데이트
+    const copyBtn = document.getElementById('copyBtn');
+    if (copyBtn) {
+        // 기존 이벤트 리스너 제거 후 새로 등록
+        const newCopyBtn = copyBtn.cloneNode(true);
+        copyBtn.parentNode.replaceChild(newCopyBtn, copyBtn);
+        
+        newCopyBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(PORTFOLIO_DATA.personal.email);
+                document.getElementById('copySuccess').style.opacity = '1';
+                document.getElementById('copyText').textContent = getCurrentLang() === 'ko' ? '복사 완료!' : 'Copied!';
+                setTimeout(() => {
+                    document.getElementById('copySuccess').style.opacity = '0';
+                    document.getElementById('copyText').textContent = getCurrentLang() === 'ko' ? '복사' : 'Copy';
+                }, 2000);
+            } catch (err) {
+                console.error('복사 실패:', err);
+            }
+        });
+    }
+}
+// ============================================
+// 3️⃣ vCard 다운로드 기능 업데이트
+// ============================================
+function updateVcardDownload() {
+    // downloadVcardBtn이 이미 있다면 이벤트 업데이트
+    // 없다면 나중에 추가할 때 사용
+}
+// ============================================
+// 4️⃣ 초기화 함수
+// ============================================
+function initializePortfolioData() {
+    console.log('📊 포트폴리오 데이터 초기화 중...');
+    
+    // 자격증 카드 렌더링
+    renderCertifications();
+    
+    // 연락처 정보 업데이트
+    updateContactInfo();
+    
+    console.log('✅ 포트폴리오 데이터 초기화 완료!');
+}
+
+// ============================================
+// 📥 다운로드 기능
+// ============================================
+
+// PDF 다운로드
+const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+if (downloadPdfBtn) {
+    downloadPdfBtn.addEventListener('click', () => {
+        const lang = getCurrentLang();
+        const message = lang === 'ko' 
+            ? '브라우저 인쇄 대화상자에서 "PDF로 저장"을 선택하세요!' 
+            : 'Select "Save as PDF" in the print dialog!';
+        alert(message);
+        setTimeout(() => window.print(), 300);
+    });
+}
+
+// vCard 다운로드  
+const downloadVcardBtn = document.getElementById('downloadVcardBtn');
+if (downloadVcardBtn) {
+    downloadVcardBtn.addEventListener('click', () => {
+        const lang = getCurrentLang();
+        const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:김민재
+N:김;민재;;;
+ORG:기아자동차
+TITLE:설비관리 엔지니어
+EMAIL:minjae5121@naver.com
+URL:https://portailor.github.io/website-demo/
+END:VCARD`;
+        
+        const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '김민재_명함.vcf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        const message = lang === 'ko'
+            ? '✅ vCard 다운로드 완료!\n\n스마트폰에서 파일을 열어 연락처를 저장할 수 있습니다.'
+            : '✅ vCard downloaded!\n\nYou can open the file on your phone to save the contact.';
+        alert(message);
+    });
+}
+
+// ============================================
+// 5️⃣ 언어 변경 시 데이터 재렌더링
+// ============================================
+// 기존 setLanguage 함수 수정이 필요합니다.
+// setLanguage 함수 마지막에 renderCertifications() 호출 추가
+// 기존 setLanguage 함수를 찾아서 마지막에 추가:
+const originalSetLanguage = setLanguage;
+setLanguage = function(lang) {
+    originalSetLanguage(lang);
+    // 데이터 기반 요소 재렌더링
+    renderCertifications();
+};
+// ============================================
+// 6️⃣ DOM 로드 완료 시 실행
+// ============================================
+// 기존 DOMContentLoaded 리스너에 추가하거나 새로 생성
+document.addEventListener('DOMContentLoaded', () => {
+    initializePortfolioData();
+});
+
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Skill bar animation
+        const skillBars = document.querySelectorAll('.skill-bar');
+
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.style.width;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            skillObserver.observe(bar);
+
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 500);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Email Modal
+        const emailModal = document.getElementById('emailModal');
+        const emailBtn = document.getElementById('emailBtn');
+        const closeModal = document.getElementById('closeModal');
+        const copyBtn = document.getElementById('copyBtn');
+        const emailText = document.getElementById('emailText');
+        const copySuccess = document.getElementById('copySuccess');
+        const copyText = document.getElementById('copyText');
+
+        // Open modal
+        emailBtn.addEventListener('click', () => {
+            emailModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modal
+        const closeModalFunc = () => {
+            emailModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeModal.addEventListener('click', closeModalFunc);
+
+        // Close on backdrop click
+        emailModal.addEventListener('click', (e) => {
+            if (e.target === emailModal) {
+                closeModalFunc();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && emailModal.classList.contains('active')) {
+                closeModalFunc();
+            }
+        });
+
+        // Copy email
+        copyBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText('minjae5121@naver.com');
+                copySuccess.style.opacity = '1';
+                copyText.textContent = '복사 완료!';
+                setTimeout(() => {
+                    copySuccess.style.opacity = '0';
+                    copyText.textContent = '복사';
+                }, 2000);
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = 'minjae5121@naver.com';
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                copySuccess.style.opacity = '1';
+                copyText.textContent = '복사 완료!';
+                setTimeout(() => {
+                    copySuccess.style.opacity = '0';
+                    copyText.textContent = '복사';
+                }, 2000);
+            }
+        });
+
+        // Scroll Animations with Intersection Observer
+        const scrollAnimationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe all scroll-fade-in elements
+        document.querySelectorAll('.scroll-fade-in').forEach(el => {
+            scrollAnimationObserver.observe(el);
+        });
+
+        // Observe timeline items with staggered delay
+        const timelineItems = document.querySelectorAll('.slide-in-left');
+        timelineItems.forEach((item, index) => {
+            item.style.transitionDelay = `${index * 0.1}s`;
+            scrollAnimationObserver.observe(item);
+        });
+
+        // Observe certification cards with staggered delay
+        const certCards = document.querySelectorAll('.cert-card');
+        certCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            card.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            card.style.transitionDelay = `${index * 0.1}s`;
+
+            const certObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'scale(1)';
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            certObserver.observe(card);
+        });
+
+        // Language Switching System
+// 데스크톱 언어 버튼
+const langKr = document.getElementById('lang-kr');
+const langEn = document.getElementById('lang-en');
+
+// 모바일 언어 버튼
+const langKrMobile = document.getElementById('lang-kr-mobile');
+const langEnMobile = document.getElementById('lang-en-mobile');
+
+let currentLang = localStorage.getItem('portfolio-lang') || 'ko';
+
+
+        // Set initial language
+        setLanguage(currentLang);
+
+        // Language button click handlers
+// 데스크톱 버튼
+if (langKr) langKr.addEventListener('click', () => setLanguage('ko'));
+if (langEn) langEn.addEventListener('click', () => setLanguage('en'));
+
+// 모바일 버튼
+if (langKrMobile) langKrMobile.addEventListener('click', () => setLanguage('ko'));
+if (langEnMobile) langEnMobile.addEventListener('click', () => setLanguage('en'));
+
+       function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('portfolio-lang', lang);
+
+    // Update button states (데스크톱 + 모바일)
+    if (lang === 'ko') {
+        // 데스크톱 버튼
+        if (langKr) langKr.classList.add('active');
+        if (langEn) langEn.classList.remove('active');
+        // 모바일 버튼
+        if (langKrMobile) langKrMobile.classList.add('active');
+        if (langEnMobile) langEnMobile.classList.remove('active');
+    } else {
+        // 데스크톱 버튼
+        if (langEn) langEn.classList.add('active');
+        if (langKr) langKr.classList.remove('active');
+        // 모바일 버튼
+        if (langEnMobile) langEnMobile.classList.add('active');
+        if (langKrMobile) langKrMobile.classList.remove('active');
+    }
+
+            // Add translating class for fade effect
+            document.body.classList.add('translating');
+
+            // Wait for fade out, then change content
+            setTimeout(() => {
+                // Update all elements with data-lang attributes
+                document.querySelectorAll('[data-lang-ko][data-lang-en]').forEach(element => {
+                    if (lang === 'ko') {
+                        element.textContent = element.getAttribute('data-lang-ko');
+                    } else {
+                        element.textContent = element.getAttribute('data-lang-en');
+                    }
+                });
+
+                // Update elements with data-ko and data-en attributes (for multi-line content)
+                document.querySelectorAll('[data-ko][data-en]').forEach(element => {
+                    if (lang === 'ko') {
+                        element.innerHTML = element.getAttribute('data-ko');
+                    } else {
+                        element.innerHTML = element.getAttribute('data-en');
+                    }
+                });
+
+                // Remove translating class for fade in
+                document.body.classList.remove('translating');
+
+                // Re-trigger typing effect when language changes
+                if (window.typingEffect) {
+                    window.typingEffect.restart();
+                }
+            }, 150);
+        }
+
+        // ========================================
+        // PREMIUM INTERACTIVE FEATURES
+        // ========================================
+
+        //1. CURSOR TRAIL EFFECT
+        if (!('ontouchstart' in window) && window.innerWidth > 768) {
+            const trails = [];
+            const trailCount = 5;
+
+            for (let i = 0; i < trailCount; i++) {
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                document.body.appendChild(trail);
+                trails.push({ element: trail, x: 0, y: 0 });
+            }
+
+            let mouseX = 0, mouseY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateTrails() {
+                trails.forEach((trail, index) => {
+                    const delay = (index + 1) * 50;
+                    trail.x += (mouseX - trail.x) / (delay / 10);
+                    trail.y += (mouseY - trail.y) / (delay / 10);
+
+                    trail.element.style.left = trail.x + 'px';
+                    trail.element.style.top = trail.y + 'px';
+                    trail.element.style.opacity = 0.6 - (index * 0.1);
+                });
+
+                requestAnimationFrame(animateTrails);
+            }
+
+            animateTrails();
+        }
+
+        // 2. PARTICLE BACKGROUND ANIMATION
+        const canvas = document.getElementById('particle-canvas');
+        if (canvas && window.innerWidth > 768) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+
+            const particles = [];
+            const particleCount = 40;
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                    this.size = Math.random() * 3 + 1;
+                    this.speedY = -Math.random() * 0.5 - 0.3;
+                    this.speedX = (Math.random() - 0.5) * 0.3;
+                    this.opacity = Math.random() * 0.3 + 0.1;
+                }
+
+                update() {
+                    this.y += this.speedY;
+                    this.x += this.speedX;
+
+                    if (this.y < 0) this.y = canvas.height;
+                    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                }
+
+                draw() {
+                    ctx.fillStyle = `rgba(201, 169, 98, ${this.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+                requestAnimationFrame(animateParticles);
+            }
+
+            animateParticles();
+
+            window.addEventListener('resize', () => {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            });
+        }
+
+        // 3. PARALLAX SCROLL EFFECT (HERO SECTION)
+        const heroSection = document.getElementById('hero');
+        if (heroSection && window.innerWidth > 768) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                if (scrolled < window.innerHeight) {
+                    heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        }
+
+        // 4. TYPING EFFECT FOR ABOUT GREETING
+        class TypingEffect {
+            constructor(elementId) {
+                this.element = document.getElementById(elementId);
+                if (!this.element) return;
+
+                this.koText = this.element.getAttribute('data-lang-ko');
+                this.enText = this.element.getAttribute('data-lang-en');
+                this.currentIndex = 0;
+                this.isDeleting = false;
+                this.typingSpeed = 80;
+                this.cursor = null;
+            }
+
+            getCurrentText() {
+                return currentLang === 'ko' ? this.koText : this.enText;
+            }
+
+            type() {
+                if (!this.element) return;
+
+                const fullText = this.getCurrentText();
+
+                if (!this.isDeleting && this.currentIndex < fullText.length) {
+                    // Add cursor if not present
+                    if (!this.cursor) {
+                        this.cursor = document.createElement('span');
+                        this.cursor.className = 'typing-cursor';
+                        this.element.appendChild(this.cursor);
+                    }
+
+                    const char = fullText.charAt(this.currentIndex);
+                    this.element.textContent = fullText.substring(0, this.currentIndex + 1);
+                    this.element.appendChild(this.cursor);
+                    this.currentIndex++;
+
+                    setTimeout(() => this.type(), this.typingSpeed);
+                } else {
+                    // Typing complete - fade out cursor
+                    if (this.cursor) {
+                        this.cursor.classList.add('fade-out');
+                        setTimeout(() => {
+                            if (this.cursor && this.cursor.parentNode) {
+                                this.cursor.parentNode.removeChild(this.cursor);
+                                this.cursor = null;
+                            }
+                        }, 500);
+                    }
+                }
+            }
+
+            restart() {
+                this.currentIndex = 0;
+                this.isDeleting = false;
+                if (this.cursor && this.cursor.parentNode) {
+                    this.cursor.parentNode.removeChild(this.cursor);
+                    this.cursor = null;
+                }
+                this.element.textContent = '';
+                setTimeout(() => this.type(), 500);
+            }
+
+            start() {
+                setTimeout(() => this.type(), 1000);
+            }
+        }
+
+        // Initialize typing effect
+        window.typingEffect = new TypingEffect('about-greeting');
+        const aboutObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && window.typingEffect.currentIndex === 0) {
+                    window.typingEffect.start();
+                    aboutObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const aboutGreeting = document.getElementById('about-greeting');
+        if (aboutGreeting) {
+            aboutObserver.observe(aboutGreeting);
+        }
+
+        // 5. NUMBER COUNTING ANIMATIONS
+        function animateNumber(element, start, end, duration, isCurrency = false, isDecimal = false) {
+            const range = end - start;
+            const increment = range / (duration / 16);
+            let current = start;
+            const isKorean = currentLang === 'ko';
+
+            const timer = setInterval(() => {
+                current += increment;
+                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                    current = end;
+                    clearInterval(timer);
+                }
+
+                let displayValue;
+                if (isDecimal) {
+                    displayValue = current.toFixed(1);
+                } else if (isCurrency) {
+                    displayValue = Math.floor(current).toLocaleString();
+                    displayValue = isKorean ? `₩${displayValue}원` : `₩${displayValue} KRW`;
+                } else {
+                    displayValue = Math.floor(current).toLocaleString();
+                }
+
+                element.textContent = displayValue;
+            }, 16);
+        }
+
+        // Observe and count numbers when in viewport
+        const numberCountObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.counted) {
+                    entry.target.dataset.counted = 'true';
+
+                    const targetValue = parseFloat(entry.target.dataset.target);
+                    const isCurrency = entry.target.dataset.currency === 'true';
+                    const isDecimal = entry.target.dataset.decimal === 'true';
+
+                    animateNumber(entry.target, 0, targetValue, 2000, isCurrency, isDecimal);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Add counting-number class and data attributes to cost savings
+        document.querySelectorAll('[data-lang-ko*="₩8,880,696"]').forEach(el => {
+            el.classList.add('counting-number');
+            el.dataset.target = '8880696';
+            el.dataset.currency = 'true';
+            numberCountObserver.observe(el);
+        });
+
+        document.querySelectorAll('[data-lang-ko*="₩740,058"]').forEach(el => {
+            el.classList.add('counting-number');
+            el.dataset.target = '740058';
+            el.dataset.currency = 'true';
+            numberCountObserver.observe(el);
+        });
+
+        // GPA Counter
+        document.querySelectorAll('[data-lang-ko*="4.5/4.5"]').forEach(el => {
+            const gpaSpan = document.createElement('span');
+            gpaSpan.className = 'counting-number';
+            gpaSpan.dataset.target = '4.5';
+            gpaSpan.dataset.decimal = 'true';
+            gpaSpan.textContent = '0.0';
+
+            // Replace "4.5" in the text with the counting span
+            const isKorean = currentLang === 'ko';
+            const originalText = isKorean ? el.getAttribute('data-lang-ko') : el.getAttribute('data-lang-en');
+
+            numberCountObserver.observe(gpaSpan);
+        });
+
+        // 6. SKILL BAR PERCENTAGE DISPLAY
+        document.querySelectorAll('.skill-bar').forEach((bar, index) => {
+            const percentage = parseInt(bar.style.width);
+            if (percentage) {
+                const percentSpan = document.createElement('span');
+                percentSpan.className = 'skill-percentage counting-number';
+                percentSpan.dataset.target = percentage.toString();
+                percentSpan.textContent = '0%';
+
+                bar.parentElement.style.position = 'relative';
+                bar.parentElement.appendChild(percentSpan);
+
+                const skillObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !percentSpan.dataset.counted) {
+                            percentSpan.dataset.counted = 'true';
+                            animateNumber(percentSpan, 0, percentage, 1500);
+                            // Add '%' after number
+                            const originalAnimate = animateNumber;
+                            let current = 0;
+                            const increment = percentage / (1500 / 16);
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= percentage) {
+                                    current = percentage;
+                                    clearInterval(timer);
+                                }
+                                percentSpan.textContent = Math.floor(current) + '%';
+                            }, 16);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                skillObserver.observe(bar);
+            }
+        });
+    </script>
+</body>
+
+</html>
